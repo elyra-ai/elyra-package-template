@@ -40,7 +40,7 @@ setup_args = dict(
     ],
     packages=find_packages(),
     install_requires=[
-        'elyra',
+        'elyra-server==0.0.1',
     ],
     include_package_data=True,
     classifiers=(
