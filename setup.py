@@ -28,8 +28,8 @@ here = os.path.abspath(os.path.dirname(__file__))
 npm_packages_path = "./dist/*.tgz"
 
 setup_args = dict(
-    name="elyra-extension",
-    version='0.0.1',
+    name="{{package-name}}",
+    version='{{version}}',
     url="https://github.com/elyra-ai/elyra",
     description="Elyra provides AI Centric extensions to JupyterLab",
     long_description=long_desc,
@@ -40,7 +40,7 @@ setup_args = dict(
     ],
     packages=find_packages(),
     install_requires=[
-        'elyra-server==0.0.1',
+        'elyra-server=={{version}}',
     ],
     include_package_data=True,
     classifiers=(
