@@ -25,8 +25,6 @@ long_desc = """
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-npm_packages_path = "./dist/*.tgz"
-
 setup_args = dict(
     name="{{package-name}}",
     version='{{version}}',
@@ -36,11 +34,11 @@ setup_args = dict(
     author="Elyra Maintainers",
     license="Apache License Version 2.0",
     data_files=[
-        ('share/jupyter/lab/extensions', glob(npm_packages_path)),
+        {{data-files}}
     ],
     packages=find_packages(),
     install_requires=[
-        'elyra-server=={{version}}',
+        {{install-requires}}
     ],
     include_package_data=True,
     classifiers=(
