@@ -16,6 +16,7 @@
 import os
 import sys
 from glob import glob
+from jupyter_packaging import get_data_files
 from setuptools import setup, find_packages
 
 long_desc = """
